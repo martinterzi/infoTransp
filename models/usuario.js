@@ -38,7 +38,7 @@ const UsuarioSchema = Schema({
 // funcion para filtrar respuesta
 UsuarioSchema.method ('toJSON', function(){
     // separo version, password y id, del resto del objeto
-    const{__v, _id, ...object}= this.toObject();
+    const{__v, _id, password, ...object}= this.toObject();
     // le sumo el id, pero con el nombre uid
     object.uid= _id;
     // retorno el objeto, sin la version, y el uid (id)

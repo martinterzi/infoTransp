@@ -34,6 +34,6 @@ app.use('/api/todo', require('./routes/busquedas'));
 app.use('/api/upload', require('./routes/uploads'));
 
 
-app.listen(process.env.PORT || 4000, ()=>{
+app.listen(process.env.PORT ||4000, ()=>{
     console.log('Corriendo servidor en puerto ' + process.env.PORT)
 })

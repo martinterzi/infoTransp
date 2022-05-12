@@ -62,7 +62,7 @@ const recPass = async (req, res) => {
     try {
         //busca email igual en tabla
         const usuarioPorEmail = await Usuario.findOne({ email });
-        const { _id, password } = usuarioPorEmail;
+        const { _id } = usuarioPorEmail;
         const uid =  JSON.stringify(_id)
 
 
@@ -77,7 +77,7 @@ const recPass = async (req, res) => {
         console.log(uid)
         console.log(xstri)
         console.log(usuarioPorEmail)
-        console.log(password)
+        
          
 
         var transporte = nodemailer.createTransport({
